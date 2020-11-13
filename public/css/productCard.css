@@ -1,0 +1,75 @@
+
+/* 
+
+This CSS could benefit from LESS or SASS. Normally, I'd use LESS for a fresh project.
+No need for this quick little project!
+
+*/
+
+/* ------------------ */
+/* Product Card General */
+/* ------------------ */
+.product-card {
+    margin: 15px;
+    padding: 16px 8px;
+    display: inline-block;
+    overflow: hidden;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.product-card .product-name,
+.product-card .product-price {
+    padding-top: 16px;
+}
+
+.product-card .product-name {
+    color: #212121;
+}
+
+.product-card .product-price {
+    color: #3f3f3f;
+}
+
+.product-card .product-rating {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.product-card .product-rating img {
+    width: 22px;
+}
+
+.product-card .product-rating img:last-child {
+    opacity: 0.1;
+}
+
+/* ------------------ */
+/* Product Image */
+/* ------------------ */
+.product-card .product-image {
+    position: relative;
+}
+
+.product-card .product-image img {
+    width: 500px;
+    transition: ease-in-out 200ms;
+}
+
+.product-card .product-image .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 45%;
+
+    display: none;
+}
+
+.product-card:hover .product-image img {
+    opacity: 0.5;
+}
+.product-card:hover .product-image .btn {
+    display: block;
+}
