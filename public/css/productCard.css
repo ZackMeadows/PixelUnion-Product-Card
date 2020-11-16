@@ -29,6 +29,14 @@ No need for this quick little project!
     color: #212121;
 }
 
+.product-card.sold-out .product-name,
+.product-card.sold-out .product-price {
+    color: rgb(134, 134, 134);
+}
+.product-card.sold-out .product-name {
+    text-decoration: line-through;
+}
+
 .product-card .product-price {
     color: #3f3f3f;
 }
@@ -39,10 +47,11 @@ No need for this quick little project!
 }
 .product-card .product-rating img {
     width: 22px;
+    opacity: 0.2;
 }
 
-.product-card .product-rating img:last-child {
-    opacity: 0.1;
+.product-card .product-rating img.filled {
+    opacity: 1;
 }
 
 /* ------------------ */
@@ -50,7 +59,7 @@ No need for this quick little project!
 /* ------------------ */
 .product-card .product-image {
     position: relative;
-}
+}   
 
 .product-card .product-image img {
     width: 500px;
@@ -67,9 +76,60 @@ No need for this quick little project!
     display: none;
 }
 
-.product-card:hover .product-image img {
+.product-card .product-image .sold-out-tag {
+    background-color: rgb(255, 175, 25);
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+
+.product-card .product-image .sold-out-tag {
+    display: flex;
+    align-items: center;
+}
+.product-card .product-image .sold-out-tag div {
+    color: white;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.product-card:not(.sold-out) .product-image .sold-out-tag {
+    display: none;
+}
+
+.product-card.sold-out .product-image .sold-out-tag {
+    display: flex;
+}
+
+.product-card:not(.sold-out):hover .product-image img {
     opacity: 0.5;
 }
-.product-card:hover .product-image .btn {
+.product-card:not(.sold-out):hover .product-image .btn {
     display: block;
+}
+
+/* ------------------ */
+/* Product Swatch */
+/* ------------------ */
+
+.product-card .product-swatches {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card .product-swatches .swatch{
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.product-card .product-swatches .swatch.active {
+    border: 1px solid white;
+    outline: 1px solid black;
 }

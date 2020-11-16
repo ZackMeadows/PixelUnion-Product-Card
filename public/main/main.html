@@ -6,17 +6,26 @@
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/productCard.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
-        <div class="product-card">
+        <div class="product-card" product-id="213">
             <div class="product-image">
                 <img src="../../assets/shirt-1.jpg"/>
-                <div class="btn btn-add">Add to cart</div>
+                <div class="btn btn-add" id="addToCartButton" product-id="213">Add to cart</div>
+                <div class="sold-out-tag">
+                    <div>SOLD OUT</div>
+                </div>
+            </div>
+            <div class="product-swatches">
+                <div id="0" class="swatch active navy-blue-background"></div>
+                <div id="1" class="swatch light-grey-background"></div>
+                <div id="2" class="swatch orange-background"></div>
             </div>
             <div class="product-name">Ultrafine Merino T-Shirt</div>
             <div class="product-price">$80.00</div>
             <div class="product-rating">
-                <img src="../../assets/star.svg">
+                <img class="filled" src="../../assets/star.svg">
                 <img src="../../assets/star.svg">
                 <img src="../../assets/star.svg">
                 <img src="../../assets/star.svg">

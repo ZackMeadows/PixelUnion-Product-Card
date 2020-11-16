@@ -26,3 +26,19 @@ body {
     background: linear-gradient(180deg, #3588cb 0%, #2052a9 100%);
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
+
+/* ------------------ */
+/* Colors */
+/* ------------------ */
+
+.navy-blue-background {
+    background-color: rgb(55, 55, 119);
+}
+
+.light-grey-background {
+    background-color: rgb(192, 192, 192);
+}
+
+.orange-background {
+    background-color: rgb(240, 152, 51);
+}
